@@ -5,6 +5,10 @@
   "license": "MIT",
   "type": "project",
   "homepage": "http://accessmanager.in",
+  "require": {
+    "php": ">=5.6.4",
+    "laravel/framework": "5.4.*"
+  },
   "autoload": {
     "psr-4": {
       "AM3\\Auth\\": "src"
