@@ -11,6 +11,11 @@
   "autoload": {
     "psr-4": {
       "AM3\\Auth\\": "src"
+    },
+    "config": {
+      "minimum-stability": "dev",
+      "sort-packages": true,
+      "optimize-autoloader": true
     }
   }
 }
