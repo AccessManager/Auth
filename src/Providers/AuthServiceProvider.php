@@ -1,6 +1,6 @@
 <?php
 
-namespace AM3\Auth\Providers;
+namespace AccessManager\Auth\Providers;
 
 
 use Illuminate\Support\ServiceProvider;
