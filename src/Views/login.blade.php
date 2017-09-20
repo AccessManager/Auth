@@ -13,6 +13,8 @@
 <!-- Theme style -->
 {!! HTML::style('assets/css/AdminLT.min.css') !!}
 
+{!! HTML::style('assets/icheck/skins/all.css') !!}
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,10 +32,10 @@
         <p class="login-box-msg">Sign in to start your session</p>
         {!! Form::open(['route'=>'login.post']) !!}
         <div class="form-group has-feedback">
-            {!! Form::text('email', null, ['class'=>'form-control','placeholder'=>'email address']) !!}
+            {!! Form::text('username', null, ['class'=>'form-control','placeholder'=>'email address']) !!}
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             <span class="text-danger">
-                  {{$errors->first('email')}}
+                  {{$errors->first('username')}}
               </span>
         </div>
         <div class="form-group has-feedback">
@@ -56,12 +58,23 @@
             </div><!-- /.col -->
         </div>
         {!! Form::close() !!}
+        {{$errors->first('status')}}
     </div><!-- /.login-box-body -->
 </div><!-- /.login-box -->
-
 <!-- jQuery 2.1.4 -->
 {!! HTML::script('assets/js/jQuery-3.2.1.min.js') !!}
 <!-- Bootstrap 3.3.5 -->
-{!! HTML::script('assets/js/bootstrap.min.js') !!}
+{!! HTML::script('assets/js/bootstrap-3.3.7.min.js') !!}
+<!-- iCheck -->
+{!! HTML::script('assets/icheck/icheck.min.js') !!}
+<script>
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
 </body>
 </html>
