@@ -5,7 +5,7 @@ Route::group([
 ], function(){
 
     Route::get('login', [
-        'as'    =>  'login.get',
+        'as'    =>  'login',
         'uses'  =>  'LoginController@getLogin',
     ]);
 
@@ -13,5 +13,9 @@ Route::group([
         'as'    =>  'login.post',
         'uses'  =>  'LoginController@postLogin',
     ]);
-    
+
+    Route::get('logout', [
+        'as'    =>  'logout',
+        'uses'  =>  'LoginController@getLogout',
+    ]);
 });
