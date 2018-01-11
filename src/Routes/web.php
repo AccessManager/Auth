@@ -19,3 +19,20 @@ Route::group([
         'uses'  =>  'LoginController@getLogout',
     ]);
 });
+
+Route::group([
+    'namespace'     =>  'AccessManager\Auth\Http\Controllers',
+    'prefix'        =>  'system',
+    'middleware'    =>  'auth',
+], function(){
+
+    Route::get('change-password', [
+        'as'    =>  'system.change-password',
+        'uses'  =>  'PasswordResetController@getChangePassword',
+    ]);
+
+    Route::post('change-password', [
+        'as'    =>  'system.change-password.post',
+        'uses'  =>  'PasswordResetController@postChangePassword',
+    ]);
+});
