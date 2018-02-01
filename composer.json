@@ -13,7 +13,6 @@
     }
   },
   "config": {
-    "minimum-stability": "dev",
     "sort-packages": true,
     "optimize-autoloader": true
   }
