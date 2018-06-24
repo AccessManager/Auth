@@ -32,7 +32,7 @@
         <p class="login-box-msg">Sign in to start your session</p>
         {!! Form::open(['route'=>'login.post']) !!}
         <div class="form-group has-feedback">
-            {!! Form::text('username', null, ['class'=>'form-control','placeholder'=>'email address']) !!}
+            {!! Form::text('username', null, ['class'=>'form-control','placeholder'=>'username']) !!}
             <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
             <span class="text-danger">
                   {{$errors->first('username')}}
